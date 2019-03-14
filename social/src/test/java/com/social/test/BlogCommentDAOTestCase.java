@@ -3,6 +3,7 @@ package com.social.test;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -22,7 +23,7 @@ public class BlogCommentDAOTestCase
 		context.refresh();	
 		blogCommentDAO=(BlogCommentDAO)context.getBean("blogCommentDAO");
 	}
-	
+	@Ignore
 	@Test
 	public void addBlogCommentTestCase()
 	{

@@ -17,12 +17,13 @@ import com.social.model.Blog;
 import com.social.model.BlogComment;
 import com.social.model.Forum;
 import com.social.model.ForumComment;
+import com.social.model.Friend;
 import com.social.model.Job;
 import com.social.model.UserDetail;
 import com.social.model.Blog;
 
 @Configuration
-@ComponentScan("com.social")
+@ComponentScan("com.social.*")
 @EnableTransactionManagement
 public class DBConfig 
 {
@@ -56,6 +57,8 @@ public class DBConfig
 		factoryBuilder.addAnnotatedClass(UserDetail.class);
 		factoryBuilder.addAnnotatedClass(Forum.class);
 		factoryBuilder.addAnnotatedClass(ForumComment.class);
+		factoryBuilder.addAnnotatedClass(Friend.class);
+
 		
 		SessionFactory sessionFactory=factoryBuilder.buildSessionFactory();
 		System.out.println("--Created the sessionFactory -----");
