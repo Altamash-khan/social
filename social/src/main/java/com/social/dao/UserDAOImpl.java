@@ -117,7 +117,8 @@ public class UserDAOImpl implements UserDAO
 	    }
 	}
 
-	public boolean makeoffline(UserDetail user) {
+	@Override
+	public boolean deleteUser(UserDetail user) {
 		// TODO Auto-generated method stub
 		return false;
 	}

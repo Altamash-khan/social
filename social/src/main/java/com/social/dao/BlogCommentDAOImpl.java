@@ -18,8 +18,8 @@ public class BlogCommentDAOImpl implements BlogCommentDAO
 {
 	@Autowired
 	SessionFactory sessionFactory;
-	
-	// @Override
+	 
+	 @Override
 		public boolean addBlogComment(BlogComment comment)
 	   {
 		 try
@@ -33,7 +33,7 @@ public class BlogCommentDAOImpl implements BlogCommentDAO
 		 }
 		}
 		
-		// @Override
+		@Override
 				public boolean deleteBlogComment(BlogComment comment)
 			   {
 				 try
@@ -47,7 +47,7 @@ public class BlogCommentDAOImpl implements BlogCommentDAO
 				 }
 				}
 				
-				//@Override
+				@Override
 				public List<BlogComment> listBlogComment(int blogId)
 				{
 					 Session session= sessionFactory.openSession();
@@ -56,6 +56,12 @@ public class BlogCommentDAOImpl implements BlogCommentDAO
 					 List<BlogComment> listComment=query.list();
 					 session.close();
 				     return listComment;
+				}
+
+				@Override
+				public List<BlogComment> getAllBlogComments() {
+					// TODO Auto-generated method stub
+					return null;
 				}
 
 }

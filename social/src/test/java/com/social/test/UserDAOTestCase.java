@@ -3,6 +3,7 @@ package com.social.test;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -22,6 +23,7 @@ public static void initialize()
 	context.refresh();	
 	userDAO=(UserDAO)context.getBean("userDAO");
 } 
+//@Ignore
 @Test
 public void registerUserTest()
 {
@@ -39,40 +41,40 @@ public void registerUserTest()
 	assertTrue("Problem in adding User:",userDAO.registerUser(user));
 }
    
-
-    //@Test
+    @Ignore
+    @Test
 	public void updateCartItemTest()
 	{
 	UserDetail user=userDAO.getUser("Khan");
 	user.setEmailId("ALTAMASHKHAN@GMAIL.COM");
 	assertTrue("problem in Upading the User",userDAO.updateUser(user));
 	}
-	
-	//@Test
+    @Ignore
+	@Test
 	public void makeOfflineTest()
 	{
 		UserDetail user=userDAO.getUser("Khan");
-		assertTrue("problem in making ofline: ",userDAO.makeoffline(user));
+		assertTrue("problem in making ofline: ",userDAO.makeOffline(user));
 	}
-	
-	//@Test
+    @Ignore
+	@Test
 	public void makeOnlineTest()
 	{
 		UserDetail user=userDAO.getUser("Khan");
 		assertTrue("problem in making online: ",userDAO.makeOnline(user));
 	}
-	
-	//@Test
+    @Ignore
+	@Test
 	 public void rejectUserTest()
 	 {
 		 UserDetail user=userDAO.getUser("Khan");
 		 assertTrue("Problem in Rejecting the User", userDAO.rejectUser(user));
 	 }
-	
-	//@Test
+    @Ignore
+	@Test
 	 public void approveUserTest()
 	 {
-		 UserDetail user=userDAO.getUser("");
+		 UserDetail user=userDAO.getUser("Khan");
 		 assertTrue("Problem in Approving the User", userDAO.approveUser(user));
 	 }
 }
