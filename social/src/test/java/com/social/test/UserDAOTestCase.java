@@ -29,7 +29,7 @@ public void registerUserTest()
 {
 	UserDetail user=new UserDetail();
 	
-	user.setUserId(1);
+	//user.setUserId(1);
 	user.setCustomerName("ALTAMASH");
 	user.setUsername("Khan");
 	user.setPassword("12345");
