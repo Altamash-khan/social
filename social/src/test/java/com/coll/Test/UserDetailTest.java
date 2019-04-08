@@ -23,7 +23,7 @@ public class UserDetailTest {
 		userdetailDAO=(UserDetailDAO)context.getBean("userdetailDAO");
 		
 	}
-	//@Ignore
+	@Ignore
 	@Test
 	public void registerUserTest()
 	{

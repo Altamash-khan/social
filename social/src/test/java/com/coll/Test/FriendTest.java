@@ -60,15 +60,15 @@ public class FriendTest {
   public void sendFriendRequest() 
   {
 	  Friend friend=new Friend();
-	  friend.setLoginname("Aditiya");
-	  friend.setFriendloginname("virat");
+	  friend.setLoginname("vishal");
+	  friend.setFriendloginname("altamash");
 	  assertTrue("Problem in Sernding friend Request",friendDAO.sendFriendRequest(friend));
 	  }
-  @Ignore
+ // @Ignore
   @Test
   public void acceptFriendRequestTest()
   {
-	  assertTrue("Problem in accepting friend request",friendDAO.acceptFriendRequest(972));
+	  assertTrue("Problem in accepting friend request",friendDAO.acceptFriendRequest(1952));
 	  
   }
 @Ignore
